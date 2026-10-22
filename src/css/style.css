@@ -1,0 +1,189 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+html
+{
+    scroll-padding-top: 150px;
+}
+
+.header
+{
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    background-color: #000000;
+}
+
+.header-container
+{
+    padding: 30px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-logo
+{
+    display: grid;
+    align-self: center;
+    place-items: center;
+}
+
+.header-logo-image
+{
+    max-width: 350px;
+}
+
+.menu
+{
+
+}
+
+.menu-list
+{
+    gap: 40px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-element
+{
+    color: #ffffff;
+    font-size: 17px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-element-border
+{
+    padding: 15px;
+    border: 0.1rem solid #ffffff;
+    border-radius: 26px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.menu-element:hover
+{
+    color: #a996f4;
+}
+
+.menu-element-border:hover
+{
+    border-color: #a996f4;
+}
+
+.main
+{
+    background: url("../assets/images/background.webp");
+}
+
+.main-container
+{
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 150px 60px 50px;
+}
+
+.main-text-block
+{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.paragraph
+{
+    color: #000000;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.text
+{
+    font-size: 19px;
+}
+
+.footer
+{
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: #000000;
+}
+
+.footer-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    padding: 20px 120px;
+}
+
+.footer-logo-image
+{
+    max-width: 160px;
+}
+
+.footer-paragraph
+{
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.footer-text
+{
+    display: inline-flex;
+    gap: 6px;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.footer-link-text
+{
+    display: inline-flex;
+    gap: 6px;
+    color: #ffffff;
+    font-size: 17px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link-text:hover
+{
+    color: #a996f4;
+}
+
+.svg-size
+{
+    width: 1.4em;
+    height: 1.4em;
+}
+
+.svg-scale
+{
+    transform: scale(1.4);
+}
+
+.contact-block
+{
+    gap: 4px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.copyright
+{
+    width: 100%;
+    color: #a9a9a9;
+    font-size: 14px;
+    text-align: center;
+}

@@ -1,91 +1,215 @@
 <!doctype html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <title>GHK Restoration Developer</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon.png">
-    <script src="js/main.js" defer></script>
-</head>
-<body>
-    <header class="header">
-        <div class="header-container">
-            <a class="banner-logo" href="">
-                <img class="header-logo-image" src="assets/icons/logos/header.png" alt="GHK Restoration Developer">
-            </a>
-            <nav class="menu" aria-label="Меню">
-                <ul class="menu-list">
-                    <li><a class="menu-element" href="#about">Про нас</a></li>
-                    <li><a class="menu-element" href="#feature">Послуги</a></li>
-                    <li><a class="menu-element" href="#portfolio">Портфоліо</a></li>
-                    <li><a class="menu-element" href="#contact">Контакти</a></li>
-                    <li><a class="menu-element menu-element-border" href="#apply">Залишити заявку</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="main">
-        <div class="main-container">
-            <div id="about" class="main-text-block">
-                <h1 class="paragraph">¶ Про нас</h1>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <head>
+        <meta charset="UTF-8">
+        <title>GHK Restoration Developer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+              integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer">
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+              integrity="sha384-nWN3KqaaVcbEsCjLSV+2jMjh62Iny/+mN3srM8TZeM8N6aj7eDl5wwYggjAJ4/sJ"
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon.png">
+        <script src="js/main.js" defer></script>
+    </head>
+    <body>
+        <header id="header">
+            <div class="header-container">
+                <a id="header-logo" href>
+                    <div id="header-trademark"></div>
+                    <div id="header-label"></div>
+                </a>
+                <nav>
+                    <ul class="menu">
+                        <li><a class="menu-element" href="#about">Про нас</a></li>
+                        <li><a class="menu-element" href="#service">Послуги</a></li>
+                        <li><a class="menu-element" href="#experience">Досвід</a></li>
+                        <li><a id="apply-button" href="#contact">Залишити заявку</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div id="feature" class="main-text-block">
-                <h1 class="paragraph">¶ Послуги</h1>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div id="portfolio" class="main-text-block">
-                <h1 class="paragraph">¶ Портфоліо</h1>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-    </main>
-    <footer class="footer">
-        <div class="footer-container">
-            <a class="banner-logo" href="">
-                <img class="footer-logo-image" src="assets/icons/logos/footer.png" alt="GHK Restoration Developer">
-            </a>
-            <div id="contact" class="contact-block">
-                <p class="footer-paragraph">Контакти</p>
-                <div class="footer-text">
-                    <svg class="svg-size"><use class="svg-scale" href="assets/icons/contacts/geo.svg"/></svg>
-                    <p>м. Київ, Україна</p>
+        </header>
+        <main>
+            <div class="main-container">
+                <section id="about">
+                    <div class="main-paragraph">
+                        <h3>Про нас</h3>
+                        <h2>Команда, яка будує як для себе</h2>
+                    </div>
+                    <p>
+                        Наша компанія — це команда професіоналів, об'єднаних спільною метою:
+                        створювати сучасні, безпечні та функціональні об'єкти, які відповідають найвищим стандартам якості.
+                        Ми виконуємо повний цикл будівельно-монтажних робіт, беручи на себе відповідальність за кожен етап —
+                        від першої концепції та розробки проєкту до здачі в експлуатацію й фінішного оздоблення.
+                    </p>
+                </section>
+                <hr>
+                <section id="service">
+                    <div class="main-paragraph">
+                        <h3>Послуги</h3>
+                        <h2>Напрями нашої діяльності</h2>
+                    </div>
+                    <p>
+                        Ми пропонуємо виважені інженерні та будівельні рішення для приватних і корпоративних клієнтів.
+                        Наша компанія бере на себе весь комплекс робіт, позбавляючи вас потреби шукати окремих підрядників під кожне завдання.
+                        Завдяки власному штату фахівців та технічному оснащенню ми гарантуємо
+                        високу якість, суворе дотримання норм і прозорий контроль на кожному етапі.<br><br>
+                    </p>
+                    <div class="service-block">
+                        <div>
+                            <div><i class="fa-solid fa-pen-ruler"></i></div>
+                            <h3>Індивідуальне проєктування</h3>
+                            <p>Розробка архітектурних рішень, 3D-візуалізацій та повного комплекту робочої документації.</p>
+                        </div>
+                        <div>
+                            <div><i class="fa-solid fa-hammer"></i></div>
+                            <h3>Будівництво «під ключ»</h3>
+                            <p>Повний цикл зведення житла від фундаменту до фінішного оздоблення й здачі в експлуатацію.</p>
+                        </div>
+                        <div>
+                            <div><i class="fa-solid fa-paint-roller"></i></div>
+                            <h3>Комплексний ремонт</h3>
+                            <p>Якісне втілення дизайнерських проєктів у квартирах, будинках та комерційних приміщеннях.</p>
+                        </div>
+                        <div>
+                            <div><i class="fa-solid fa-trowel"></i></div>
+                            <h3>Фасадні роботи</h3>
+                            <p>Термоізоляція, гідроізоляція та сучасне оздоблення фасадів для енергоефективності будівлі.</p>
+                        </div>
+                    </div>
+                </section>
+                <hr>
+                <section id="experience">
+                    <div class="main-paragraph">
+                        <h3>Досвід</h3>
+                        <h2>Результати, якими ми пишаємося</h2>
+                    </div>
+                    <p class>
+                        За 10 років роботи на ринку будівельних послуг наша компанія пройшла шлях від команди однодумців
+                        до надійного експерта у сфері житлового та комерційного будівництва.
+                        Наш досвід — це сотні успішно реалізованих проєктів, тисячі задоволених клієнтів
+                        та бездоганна репутація, яку ми підтверджуємо щодня.<br><br>
+                        Також ми пишаємося співпрацею з компаніями, які поділяють наші цінності:
+                        безкомпромісну якість, інноваційність та відповідальність.<br><br>
+                        Кожен проєкт у нашому портфоліо – результат швидкої роботи команди та довіра кращих компаній до нашого досвіду.<br><br>
+                    </p>
+                    <div class="experience-block">
+                        <div>
+                            <p>10</p>
+                            <p>років</p>
+                        </div>
+                        <div>
+                            <p>100+</p>
+                            <p>проєктів</p>
+                        </div>
+                        <div>
+                            <p>1000+</p>
+                            <p>клієнтів</p>
+                        </div>
+                        <div>
+                            <p>100 тис.</p>
+                            <p>м<sup>2</sup></p>
+                        </div>
+                    </div>
+                    <div class="partners-slider">
+
+                    </div>
+                </section>
+                <hr>
+                <div id="contact">
+                    <div class="main-paragraph">
+                        <h3>Залишити заявку</h3>
+                        <h2>Зв'яжіться з нами</h2>
+                    </div>
+                    <p>Залиште заявку, і ми допоможемо втілити вашу ідею в реальний будівельний проєкт.</p>
+                    <div class="contact-block">
+                        <div>
+                            <div><i class="fa-solid fa-location-dot"></i></div>
+                            <h4>Адреса</h4>
+                            <p>м. Київ, Україна</p>
+                        </div>
+                        <div>
+                            <div><i class="fa-solid fa-phone"></i></div>
+                            <h4>Номер телефону</h4>
+                            <p>+380 99 999 99 99</p>
+                        </div>
+                        <div>
+                            <div><i class="fa-solid fa-envelope"></i></div>
+                            <h4>Поштова скринька</h4>
+                            <p>example@domain.com</p>
+                        </div>
+                    </div>
+                    <form action="https://api.web3forms.com/submit" method="post">
+                        <input type="hidden" name="access_key" value="b1bad2af-dd14-4741-9c49-8eb9f811f317"/>
+                        <label>
+                            <span>Повне ім'я</span>
+                            <span>
+                                <i class="bi bi-person"></i>
+                                <input name="name" type="text" placeholder="Іван Петров" required autocomplete="on"/>
+                            </span>
+                        </label>
+                        <label>
+                            <span>Номер телефону</span>
+                            <span>
+                                <i class="bi bi-telephone"></i>
+                                <input name="phone" type="tel" placeholder="+380" required autocomplete="on"/>
+                            </span>
+                        </label>
+                        <label>
+                            <span>Поштова скринька</span>
+                            <span>
+                                <i class="bi bi-envelope"></i>
+                                <input name="email" type="email" placeholder="example@domain.com" required autocomplete="on"/>
+                            </span>
+                        </label>
+                        <label>
+                            <span>Послуга</span>
+                            <span>
+                                <i class="bi bi-nut"></i>
+                                <select name="feature" required autocomplete="on">
+                                    <option value="default" selected disabled hidden>Оберіть послугу...</option>
+                                    <option value="project">Індивідуальне проєктування</option>
+                                    <option value="construction">Будівництво «під ключ»</option>
+                                    <option value="interior">Комплексний ремонт</option>
+                                    <option value="exterior">Фасадні роботи</option>
+                                </select>
+                                <b class="fa-solid fa-angle-down"></b>
+                            </span>
+                        </label>
+                        <label>
+                            <span>Повідомлення</span>
+                            <textarea name="message" autocomplete="off"></textarea>
+                        </label>
+                        <div class="h-captcha" data-captcha="true"></div>
+                        <button type="submit">Надіслати</button>
+                    </form>
                 </div>
-                <div class="footer-text">
-                    <svg class="svg-size"><use class="svg-scale" href="assets/icons/contacts/phone.svg"/></svg>
-                    <p>+380 99 999 99 99</p>
-                </div>
-                <div class="footer-text">
-                    <svg class="svg-size"><use class="svg-scale" href="assets/icons/contacts/mail.svg"/></svg>
-                    <p>example@mail.com</p>
-                </div>
             </div>
-            <div class="contact-block">
-                <p class="footer-paragraph">Соцмережі</p>
-                <a class="footer-link-text" href="https://www.facebook.com">
-                    <svg class="svg-size"><use class="svg-scale" href="assets/icons/socials/facebook.svg"/></svg>
-                    <p>Facebook</p>
-                </a>
-                <a class="footer-link-text" href="https://www.instagram.com">
-                    <svg class="svg-size"><use class="svg-scale" href="assets/icons/socials/instagram.svg"/></svg>
-                    <p>Instagram</p>
-                </a>
-                <a class="footer-link-text" href="https://x.com">
-                    <svg class="svg-size"><use class="svg-scale" href="assets/icons/socials/twitter.svg"/></svg>
-                    <p>Twitter</p>
-                </a>
-                <a class="footer-link-text" href="https://telegram.org">
-                    <svg class="svg-size"><use class="svg-scale" href="assets/icons/socials/telegram.svg"/></svg>
-                    <p>Telegram</p>
-                </a>
-                <a class="footer-link-text" href="https://www.viber.com">
-                    <svg class="svg-size"><use class="svg-scale" href="assets/icons/socials/viber.svg"/></svg>
-                    <p>Viber</p>
-                </a>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <div class="footer-trademark"></div>
+                    <div class="footer-label"></div>
+                </div>
+                <div class="socials">
+                    <a class="fa-brands fa-facebook" href="https://www.facebook.com"></a>
+                    <a class="fa-brands fa-instagram" href="https://www.instagram.com"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://x.com"></a>
+                    <a class="fa-brands fa-telegram" href="https://telegram.org"></a>
+                    <a class="fa-brands fa-viber" href="https://www.viber.com"></a>
+                </div>
+                <hr>
+                <p>© <span id="current-year"></span> GHK Restoration Developer. Всі права захищені.</p>
             </div>
-            <p class="copyright">© 2020-<span id="year"></span> GHK Restoration Developer. Всі права захищені</p>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>

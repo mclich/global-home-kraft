@@ -28,13 +28,16 @@
                 <div class="trademark"></div>
                 <div class="label"></div>
             </a>
-            <input class="burger fa-solid fa-bars" type="checkbox" aria-label="Меню">
-            <nav class="nav">
-                <button class="element" data-target="service">Послуги</button>
-                <button class="element" data-target="experience">Досвід</button>
-                <button class="element" data-target="portfolio">Портфоліо</button>
-                <button class="element" data-target="partnership">Партнери</button>
-                <button class="button" data-target="contact">Залишити заявку</button>
+            <!--<input class="burger fa-solid fa-bars" type="checkbox" aria-label="Меню">-->
+            <button class="burger" type="button" popovertarget="menu">
+                <span class="bar"></span>
+            </button>
+            <nav id="menu" class="nav" popover>
+                <button class="element" type="button" data-target="service">Послуги</button>
+                <button class="element" type="button" data-target="experience">Досвід</button>
+                <button class="element" type="button" data-target="portfolio">Галерея</button>
+                <button class="element" type="button" data-target="partnership">Партнери</button>
+                <button class="button" type="button" data-target="contact">Залишити заявку</button>
             </nav>
         </header>
         <main class="main">
@@ -108,17 +111,17 @@
             </section>
             <section id="portfolio" class="section portfolio">
                 <div class="card">
-                    <button class="backward fa-solid fa-angle-left" disabled></button>
-                    <div class="scroller">
+                    <button class="backward fa-solid fa-angle-left" type="button" disabled></button>
+                    <div class="gallery">
                         <img class="slide" src="assets/portfolio/1.jpg" alt="Об'єкт 1" draggable="false">
                         <img class="slide" src="assets/portfolio/2.jpg" alt="Об'єкт 2" draggable="false">
                         <img class="slide" src="assets/portfolio/3.jpg" alt="Об'єкт 3" draggable="false">
                         <img class="slide" src="assets/portfolio/4.jpg" alt="Об'єкт 4" draggable="false">
                     </div>
-                    <button class="forward fa-solid fa-angle-right"></button>
+                    <button class="forward fa-solid fa-angle-right" type="button"></button>
                 </div>
                 <div class="info">
-                    <h3>Портфоліо</h3>
+                    <h3>Галерея</h3>
                     <h2>Реалізовані об'єкти</h2>
                 </div>
                 <p class="description">
@@ -135,13 +138,13 @@
                     Ми пишаємося співпрацею з компаніями, які поділяють наші цінності:
                     безкомпромісну якість, інноваційність та відповідальність.<br><br>
                 </p>
-                <div class="slider">
-                    <div class="card partner-1"></div>
-                    <div class="card partner-2"></div>
-                    <div class="card partner-3"></div>
-                    <div class="card partner-4"></div>
-                    <div class="card partner-5"></div>
-                </div>
+                <ul class="track">
+                    <li class="card partner-1"></li>
+                    <li class="card partner-2"></li>
+                    <li class="card partner-3"></li>
+                    <li class="card partner-4"></li>
+                    <li class="card partner-5"></li>
+                </ul>
             </section>
             <section id="contact" class="section contact">
                 <div class="info">
@@ -209,7 +212,7 @@
                     <label class="label stretched">
                         <span>Повідомлення</span>
                         <span class="container">
-                            <textarea class="text" name="message" placeholder="Опишіть Вашу ідею" autocomplete="off"></textarea>
+                            <textarea class="text" name="message" placeholder="Опишіть Вашу ідею..." autocomplete="off"></textarea>
                         </span>
                     </label>
                     <div class="h-captcha stretched" data-captcha="true" hidden></div>
@@ -232,6 +235,6 @@
             <hr class="divider">
             <p class="copyright">GHK Restoration Developer. Всі права захищені.</p>
         </footer>
-        <button class="upward fa-solid fa-angle-up" disabled></button>
+        <button class="upward fa-solid fa-angle-up" type="button" disabled></button>
     </body>
 </html>

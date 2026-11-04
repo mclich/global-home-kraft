@@ -2,7 +2,7 @@ const headerParts=document.querySelectorAll(".header, .header>.logo, .header>.lo
 const sectionButtons=document.querySelectorAll(".header>.nav>button");
 const portfolioPrevButton=document.querySelector(".portfolio>.card>.backward");
 const portfolioNextButton=document.querySelector(".portfolio>.card>.forward");
-const portfolioScroller=document.querySelector(".portfolio>.card>.scroller");
+const portfolioGallery=document.querySelector(".portfolio>.card>.gallery");
 const copyrightLabel=document.querySelector(".copyright");
 const upwardButton=document.querySelector(".upward");
 
@@ -18,7 +18,7 @@ window.addEventListener("scroll",shrinkHeader);
 window.addEventListener("scroll", toggleUpwardButton);
 portfolioPrevButton.addEventListener("click", scrollThroughPortfolio(false));
 portfolioNextButton.addEventListener("click", scrollThroughPortfolio(true));
-portfolioScroller.addEventListener("scroll", togglePortfolioButtons);
+portfolioGallery.addEventListener("scroll", togglePortfolioButtons);
 upwardButton.addEventListener("click", jumpToTop);
 copyrightLabel.setAttribute("data-year", getCurrentYear());
 sectionButtons.forEach(e=>e.addEventListener("click", jumpToSection(e)));
@@ -43,14 +43,14 @@ function jumpToSection(element)
 
 function scrollThroughPortfolio(direction)
 {
-    const amount=portfolioScroller.clientWidth*(direction?1:-1);
-    return ()=>portfolioScroller.scrollBy({left: amount, behavior: scrollBehavior});
+    const amount=portfolioGallery.clientWidth*(direction?1:-1);
+    return ()=>portfolioGallery.scrollBy({left: amount, behavior: scrollBehavior});
 }
 
 function togglePortfolioButtons()
 {
-    const scrollAmount=portfolioScroller.scrollLeft;
-    const scrollMax=portfolioScroller.scrollWidth-portfolioScroller.clientWidth;
+    const scrollAmount=portfolioGallery.scrollLeft;
+    const scrollMax=portfolioGallery.scrollWidth-portfolioGallery.clientWidth;
     portfolioPrevButton.disabled=scrollAmount<=0;
     portfolioNextButton.disabled=scrollAmount>=scrollMax;
 }

@@ -3,13 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", "sans-serif";
-    font-weight: 500;
-
-    &:focus-visible
-    {
-        outline: solid var(--c-highlight-light);
-    }
 }
 
 :root
@@ -48,7 +41,31 @@
     --v-card-rounding: 12px;
     --v-icon-rounding: 10px;
 
+    font-size: 62.5%;
     scroll-padding-top: 77px;
+}
+
+body
+{
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+option
+{
+    font-family: inherit;
+    font-weight: inherit;
+
+    &:focus-visible
+    {
+        outline: solid var(--c-highlight-light);
+    }
 }
 
 .header
@@ -98,7 +115,6 @@
             width: 130px;
             aspect-ratio: 715/226;
             mask: var(--i-trademark) center / contain no-repeat;
-            -webkit-mask: var(--i-trademark) center / contain no-repeat;
             transition: background-color 0.3s ease;
         }
 
@@ -107,7 +123,6 @@
             width: 220px;
             aspect-ratio: 778/128;
             mask: var(--i-label) center / contain no-repeat;
-            -webkit-mask: var(--i-label) center / contain no-repeat;
             transition:
                 display 0.3s ease allow-discrete,
                 opacity 0.3s ease,
@@ -128,10 +143,37 @@
 
     &>.nav
     {
-        display: inline-flex;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        top: calc(77px + 28px);
+        position: fixed;
+        translate: 100vw;
+        background-color: var(--c-chrome);
+        border: none;
         gap: 40px;
-        transition: gap 0.3s ease;
+        transition:
+            gap 0.3s ease,
+            translate 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:popover-open
+        {
+            translate: 0;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px)
+        {
+            width: revert;
+            height: revert;
+            flex-direction: row;
+            top: unset;
+            position: relative;
+            translate: 0;
+            background-color: transparent;
+        }
 
         &.shrunk
         {
@@ -184,10 +226,35 @@
 
     &>.burger
     {
+        width: 45px;
+        height: 45px;
+        display: revert;
+        order: 1;
+
+        &>.bar
+        {
+            &::before
+            {
+
+            }
+
+            &::after
+            {
+
+            }
+        }
+        
+        @media (min-width: 768px)
+        {
+            display: none;
+        }
+    }
+
+    /*
+    &>.burger
+    {
         order: 1;
         appearance: none;
-        -moz-appearance: none;
-        -webkit-appearance: none;
         font-size: 22px;
         cursor: pointer;
         color: var(--c-text-title);
@@ -205,6 +272,7 @@
             visibility: hidden;
         }
     }
+    */
 }
 
 .main
@@ -509,7 +577,7 @@
                 right: 12px;
             }
 
-            &>.scroller
+            &>.gallery
             {
                 display: flex;
                 overflow-x: auto;
@@ -517,12 +585,16 @@
                 scroll-behavior: smooth;
                 scroll-padding: 0;
                 scrollbar-width: none;
-                -ms-overflow-style: none;
                 border-radius: var(--v-card-rounding);
 
                 &::-webkit-scrollbar
                 {
                     display: none;
+                }
+
+                &:focus-visible
+                {
+                    outline: solid var(--c-highlight-light);
                 }
 
                 &>.slide
@@ -540,67 +612,56 @@
 
     &>.partnership
     {
-        &>.slider
+        &>.track
         {
-            width: 1150px;
+            width: 1300px;
+            height: 80px;
             display: flex;
             overflow: hidden;
-            gap: 22px;
+            list-style: none;
+            mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+
+            &:hover>.card
+            {
+                animation-play-state: paused;
+            }
 
             &>.card
             {
-                background-color: var(--c-foreground-light);
-                border: 0.05rem solid var(--c-outline-light);
-                border-radius: var(--v-card-rounding);
-                padding: 24px;
-                transition:
-                    scale 0.25s ease,
-                    filter 0.25s ease;
+                --w: 240px;
+                --d: 48s;
+                --n: 4;
 
-                &::before
-                {
-                    display: block;
-                    content: "";
-                    width: 220px;
-                    aspect-ratio: 150/45;
-                    background-color: var(--c-text-paragraph);
-                }
-
-                &:hover
-                {
-                    scale: 1.025;
-                    filter: drop-shadow(0 0 10px rgba(0 0 0 / 0.4));
-                }
+                width: 100%;
+                height: 100%;
+                background-color: var(--c-text-paragraph);
+                offset: shape(from calc(var(--w) / -2) 50%, hline by calc(sibling-count() * max(100% / var(--n), var(--w))));
+                animation: scrolling var(--d) linear infinite  calc(-1 * sibling-index() * (var(--d) / sibling-count()));
             }
 
-            &>.partner-1::before
+            &>.partner-1
             {
                 mask: var(--i-partner-1) center / contain no-repeat;
-                -webkit-mask: var(--i-partner-1) center / contain no-repeat;
             }
 
-            &>.partner-2::before
+            &>.partner-2
             {
                 mask: var(--i-partner-2) center / contain no-repeat;
-                -webkit-mask: var(--i-partner-2) center / contain no-repeat;
             }
 
-            &>.partner-3::before
+            &>.partner-3
             {
                 mask: var(--i-partner-3) center / contain no-repeat;
-                -webkit-mask: var(--i-partner-3) center / contain no-repeat;
             }
 
-            &>.partner-4::before
+            &>.partner-4
             {
                 mask: var(--i-partner-4) center / contain no-repeat;
-                -webkit-mask: var(--i-partner-4) center / contain no-repeat;
             }
 
-            &>.partner-5::before
+            &>.partner-5
             {
                 mask: var(--i-partner-5) center / contain no-repeat;
-                -webkit-mask: var(--i-partner-5) center / contain no-repeat;
             }
         }
     }
@@ -720,8 +781,6 @@
                     &>.select
                     {
                         appearance: none;
-                        -moz-appearance: none;
-                        -webkit-appearance: none;
                         cursor: pointer;
                         color: var(--c-text-paragraph);
                         padding-inline: 32px;
@@ -739,7 +798,7 @@
 
                     &>.text
                     {
-                        min-height: 90px;
+                        min-height: 5lh;
                         field-sizing: content;
                         resize: none;
 
@@ -850,14 +909,12 @@
         {
             aspect-ratio: 715/226;
             mask: var(--i-trademark) center / contain no-repeat;
-            -webkit-mask: var(--i-trademark) center / contain no-repeat;
         }
 
         &>.label
         {
             aspect-ratio: 778/128;
             mask: var(--i-label) center / contain no-repeat;
-            -webkit-mask: var(--i-label) center / contain no-repeat;
         }
     }
 
@@ -937,5 +994,13 @@
         opacity: 0;
         cursor: default;
         pointer-events: none;
+    }
+}
+
+@keyframes scrolling
+{
+    to
+    {
+        offset-distance: -100%;
     }
 }
